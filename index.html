@@ -1,0 +1,1740 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ING. SOCIAL</title>
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        .b-example-divider {
+            width: 100%;
+            height: 3rem;
+            background-color: rgba(0, 0, 0, .1);
+            border: solid rgba(0, 0, 0, .15);
+            border-width: 1px 0;
+            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
+
+        .b-example-vr {
+            flex-shrink: 0;
+            width: 1.5rem;
+            height: 100vh;
+        }
+
+        .bi {
+            vertical-align: -.125em;
+            fill: currentColor;
+        }
+
+        .nav-scroller {
+            position: relative;
+            z-index: 2;
+            height: 2.75rem;
+            overflow-y: hidden;
+        }
+
+        .nav-scroller .nav {
+            display: flex;
+            flex-wrap: nowrap;
+            padding-bottom: 1rem;
+            margin-top: -1px;
+            overflow-x: auto;
+            text-align: center;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .btn-bd-primary {
+            --bd-violet-bg: #712cf9;
+            --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+            --bs-btn-font-weight: 600;
+            --bs-btn-color: var(--bs-white);
+            --bs-btn-bg: var(--bd-violet-bg);
+            --bs-btn-border-color: var(--bd-violet-bg);
+            --bs-btn-hover-color: var(--bs-white);
+            --bs-btn-hover-bg: #6528e0;
+            --bs-btn-hover-border-color: #6528e0;
+            --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+            --bs-btn-active-color: var(--bs-btn-hover-color);
+            --bs-btn-active-bg: #5a23c8;
+            --bs-btn-active-border-color: #5a23c8;
+        }
+
+        .bd-mode-toggle {
+            z-index: 1500;
+        }
+
+        .bd-mode-toggle .dropdown-menu .active .bi {
+            display: block !important;
+        }
+    </style>
+
+    <link rel="stylesheet" href="recursos/styles/style.css">
+    <link rel="stylesheet" href="recursos/styles/cheatsheet.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+</head>
+
+<body class="bg-body-tertiary">
+
+    <header class="bd-header bg-dark d-flex align-items-stretchk">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="recursos/images/cibersecurity_icon.png" alt="Logo" width="30" height="30"
+                        class="d-inline-block align-text-top">
+                    <span class="navbar-brand mb-0 h1">Ingenería Social</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <aside class="bd-aside sticky-xl-top text-body-secondary align-self-start mb-3 mb-xl-5 px-2">
+        <h2 class="h6 pt-4 pb-3 mb-4 border-bottom">En esta página</h2>
+        <nav class="small" id="toc">
+            <ul class="list-unstyled">
+
+                <li class="my-2">
+                    <button class="btn d-inline-flex align-items-center collapsed border-0" data-bs-toggle="collapse"
+                        aria-expanded="false" data-bs-target="#investigations-collapse"
+                        aria-controls="investigations-collapse">Investigación</button>
+                    <ul class="list-unstyled ps-3 collapse" id="investigations-collapse">
+                        <li><a class="d-inline-flex align-items-center rounded text-decoration-none"
+                                href="#resumen">Resúmen</a></li>
+                        <li><a class="d-inline-flex align-items-center rounded text-decoration-none"
+                                href="#planteamiento">Planteamiento del Problema</a></li>
+                        <li><a class="d-inline-flex align-items-center rounded text-decoration-none"
+                                href="#inv-intro">Introduccion</a></li>
+                        <li><a class="d-inline-flex align-items-center rounded text-decoration-none"
+                                href="#antecedentes">Antecedentes</a></li>
+                        <li><a class="d-inline-flex align-items-center rounded text-decoration-none"
+                                href="#obj-gen">Objetivo general</a></li>
+                        <li><a class="d-inline-flex align-items-center rounded text-decoration-none"
+                                href="#obj-esp">Objetivos específicos</a></li>
+                        <li><a class="d-inline-flex align-items-center rounded text-decoration-none"
+                                href="#hipotesis">Hipótesis</a></li>
+                    </ul>
+                </li>
+
+                <li class="my-2">
+                    <button class="btn d-inline-flex align-items-center collapsed border-0" data-bs-toggle="collapse"
+                        aria-expanded="false" data-bs-target="#contents-collapse"
+                        aria-controls="contents-collapse">Marco Teórico</button>
+                    <ul class="list-unstyled ps-3 collapse" id="contents-collapse">
+                        <li><a class="d-inline-flex align-items-center rounded text-decoration-none"
+                                href="#mc-introduccion">Introduccion</a></li>
+                        <li><a class="d-inline-flex align-items-center rounded text-decoration-none"
+                                href="#fundamentos">
+                                ¿Qué es la ingeniería social?</a></li>
+                        <li><a class="d-inline-flex align-items-center rounded text-decoration-none"
+                                href="#origen">Origen y evolución del término</a></li>
+                        <li><a class="d-inline-flex align-items-center rounded text-decoration-none"
+                                href="#informatica">Impacto en informática</a></li>
+                        <li><a class="d-inline-flex align-items-center rounded text-decoration-none"
+                                href="#seguridad">Ingeniería Social y Seguridad Informática </a></li>
+                        <li><a class="d-inline-flex align-items-center rounded text-decoration-none"
+                                href="#motivadores">Motivadores</a></li>
+                        <li><a class="d-inline-flex align-items-center rounded text-decoration-none"
+                                href="#tecnicas">Técnicas</a></li>
+                        <li><a class="d-inline-flex align-items-center rounded text-decoration-none"
+                                href="#categorias">Categorías</a></li>
+                        <li><a class="d-inline-flex align-items-center rounded text-decoration-none"
+                                href="#efectos">Efectos de los ataques</a></li>
+                        <li><a class="d-inline-flex align-items-center rounded text-decoration-none"
+                                href="#recomendaciones">Recomendaciones</a></li>
+                        <li><a class="d-inline-flex align-items-center rounded text-decoration-none"
+                                href="#proteccion">Cómo protegerse</a></li>
+                        <li><a class="d-inline-flex align-items-center rounded text-decoration-none"
+                                href="#glosario">Glosario</a></li>
+                    </ul>
+                </li>
+
+                <li class="my-2">
+                    <button class="btn d-inline-flex align-items-center collapsed border-0" data-bs-toggle="collapse"
+                        aria-expanded="false" data-bs-target="#forms-collapse"
+                        aria-controls="forms-collapse">Procedimiento</button>
+                    <ul class="list-unstyled ps-3 collapse" id="forms-collapse">
+                        <li><a class="d-inline-flex align-items-center rounded text-decoration-none"
+                                href="#tipo-inv">Tipo de investigación</a></li>
+                        <li><a class="d-inline-flex align-items-center rounded text-decoration-none"
+                                href="#identificacion">Identificación de la información</a></li>
+                        <li><a class="d-inline-flex align-items-center rounded text-decoration-none"
+                                href="#universo">Universo y población</a></li>
+                        <li><a class="d-inline-flex align-items-center rounded text-decoration-none"
+                                href="#procedimiento">Procedimiento</a></li>
+                    </ul>
+                </li>
+
+                <li class="my-2">
+                    <button class="btn d-inline-flex align-items-center collapsed border-0" data-bs-toggle="collapse"
+                        aria-expanded="false" data-bs-target="#analisis-collapse"
+                        aria-controls="analisis-collapse">Análisis de resultados</button>
+                    <ul class="list-unstyled ps-3 collapse" id="analisis-collapse">
+                        <li><a class="d-inline-flex align-items-center rounded text-decoration-none"
+                                href="#resultados">Encuesta</a></li>
+                    </ul>
+                </li>
+
+                <li class="my-2">
+                    <button class="btn d-inline-flex align-items-center collapsed border-0" data-bs-toggle="collapse"
+                        aria-expanded="false" data-bs-target="#conclutions-collapse"
+                        aria-controls="conclutions-collapse">Conclusiones</button>
+                    <ul class="list-unstyled ps-3 collapse" id="conclutions-collapse">
+                        <li><a class="d-inline-flex align-items-center rounded text-decoration-none"
+                                href="#conclusiones">Conclusiones personales</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <div class="bd-cheatsheet container-fluid bg-body">
+        <section id="content">
+            <h2 class="sticky-xl-top fw-bold pt-3 pt-xl-5 pb-2 pb-xl-3">Contenidos</h2>
+
+            <article class="my-3" id="resumen">
+                <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+                    <h3>Resúmen</h3>
+                </div>
+
+                <div>
+                    <div class="bd-example-snippet bd-code-snippet">
+                        <div class="bd-example m-0 border-0">
+                            <p class="display-4">Investigación</p>
+
+                            <p class="lead"><strong>
+                                    La investigación "El control de la humanidad - ingeniería social" aborda el tema de
+                                    cómo las técnicas y estrategias de ingeniería social son utilizadas para influir en
+                                    el comportamiento humano con el objetivo de obtener beneficios o control. La
+                                    investigación explora diferentes técnicas y estrategias utilizadas por los
+                                    manipuladores, tales como la persuasión, el condicionamiento y la vigilancia, entre
+                                    otras. Además, se analiza el impacto de la ingeniería social en la sociedad y cómo
+                                    esta puede ser utilizada de manera positiva o negativa. A través de esta
+                                    investigación se busca comprender mejor cómo la ingeniería social afecta la vida de
+                                    las personas y cómo se pueden desarrollar estrategias para protegerse de ella.
+                                </strong></p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="my-3" id="inv-intro">
+                <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+                    <h3>Introducción<h3>
+                </div>
+
+                <div>
+                    <div class="bd-example-snippet bd-code-snippet">
+                        <div class="bd-example m-0 border-0">
+                            <p class="lead"><strong>La ingeniería social es un fenómeno cada vez más relevante en
+                                    nuestra sociedad actual, en la que las tecnologías de la información y la
+                                    comunicación han permitido una mayor interconexión entre personas y grupos sociales.
+                                    En este contexto, resulta de gran interés abordar el tema del control de la
+                                    humanidad desde una perspectiva científica y rigurosa, a fin de comprender los
+                                    mecanismos y técnicas utilizados para manipular y dirigir el comportamiento humano.
+                                    En este anteproyecto de investigación, se propone profundizar en el estudio de la
+                                    ingeniería social como una disciplina emergente, y analizar su impacto en la
+                                    sociedad actual desde una perspectiva ética y crítica. </strong></p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="my-3" id="planteamiento">
+                <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+                    <h3>Planteamiento del Problema<h3>
+                </div>
+
+                <div>
+                    <div class="bd-example-snippet bd-code-snippet">
+                        <div class="bd-example m-0 border-0">
+                            <p class="lead"><strong>
+                                    La ingeniería social se ha convertido en una herramienta poderosa para el control y
+                                    la manipulación de las masas, lo que ha dado lugar a limitaciones en la libertad y
+                                    autonomía de la población. Es importante investigar sus técnicas y efectos, así como
+                                    proponer estrategias para evitar su uso abusivo y proteger los derechos y la
+                                    libertad de las personas. Por lo tanto, el presente anteproyecto busca explorar los
+                                    efectos de la ingeniería social en la sociedad contemporánea y proponer soluciones.
+                                </strong></p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="my-3" id="antecedentes">
+                <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+                    <h3>Antecedentes<h3>
+                </div>
+
+                <div>
+                    <div class="bd-example-snippet bd-code-snippet">
+                        <div class="bd-example m-0 border-0">
+                            <p class="lead"><strong>
+                                    El interés por la investigación sobre el control de la humanidad a través de la
+                                    ingeniería social surge de la creciente preocupación en la sociedad actual por el
+                                    uso de técnicas de manipulación para dirigir y condicionar el comportamiento humano.
+                                    En un mundo cada vez más conectado, la exposición constante a la información y el
+                                    aumento de la cantidad de datos que se generan y se comparten, han creado nuevas
+                                    oportunidades para el uso de técnicas de ingeniería social con fines
+                                    malintencionados. La manipulación de las emociones y los sesgos cognitivos de las
+                                    personas a través de técnicas de ingeniería social puede tener consecuencias graves,
+                                    desde la propagación de noticias falsas y la desinformación hasta la violación de la
+                                    privacidad y los derechos fundamentales de las personas. En este sentido, se hace
+                                    necesario profundizar en el conocimiento y la comprensión de la ingeniería social, a
+                                    fin de desarrollar estrategias y herramientas para prevenir y combatir su uso
+                                    malintencionado, y promover su uso ético y responsable en la sociedad actual.
+                                    <br><br>
+
+                                    La creciente preocupación en la sociedad contemporánea acerca del control de la
+                                    humanidad mediante la ingeniería social es un fenómeno que ha emergido de manera
+                                    intrínseca a la era digital y globalizada en la que vivimos. Este interés se nutre
+                                    de una serie de factores y desafíos que han surgido con la interconexión global y la
+                                    revolución tecnológica. <br><br>
+
+                                    En primer lugar, en un mundo cada vez más conectado, la información fluye a una
+                                    velocidad sin precedentes. La cantidad de datos generados y compartidos diariamente
+                                    en línea es asombrosa. Este aumento exponencial de la información ha creado un caldo
+                                    de cultivo ideal para el uso de técnicas de ingeniería social con fines
+                                    malintencionados. Los actores que buscan influir en el comportamiento humano tienen
+                                    acceso a una cantidad inimaginable de datos personales, lo que les permite afinar
+                                    sus estrategias de manipulación y adaptarlas a públicos específicos. <br><br>
+
+                                    Uno de los aspectos más preocupantes es la capacidad de la ingeniería social para
+                                    manipular las emociones y los sesgos cognitivos de las personas. Estas técnicas
+                                    pueden influir sutilmente en la percepción de la realidad de los individuos,
+                                    llevándolos a adoptar creencias o comportamientos que, en circunstancias normales,
+                                    podrían no haber considerado. Esto ha dado lugar a la propagación de noticias falsas
+                                    y la desinformación a una escala sin precedentes. Las consecuencias de estas
+                                    acciones pueden ser devastadoras, socavando la confianza en las instituciones,
+                                    polarizando a la sociedad y comprometiendo la toma de decisiones informadas.
+                                    <br><br>
+
+                                    Además de los efectos en la esfera pública, la ingeniería social también plantea
+                                    graves preocupaciones en lo que respecta a la privacidad y los derechos
+                                    individuales. La recopilación y el uso indebido de datos personales erosionan la
+                                    esfera privada de las personas y pueden dar lugar a la violación de sus derechos
+                                    fundamentales. La pérdida de control sobre la propia información y la exposición a
+                                    la vigilancia constante son riesgos que todos enfrentamos en este entorno digital.
+                                    <br><br>
+
+                                    Ante este panorama, se vuelve imperativo profundizar en el conocimiento y la
+                                    comprensión de la ingeniería social. Esta comprensión no solo es esencial para
+                                    identificar y resistir las técnicas de manipulación, sino también para desarrollar
+                                    estrategias y herramientas efectivas para prevenir y combatir su uso
+                                    malintencionado. Además, es fundamental promover prácticas éticas y responsables en
+                                    la sociedad actual, tanto en términos de cómo se utilizan los datos como en la forma
+                                    en que se interactúa en línea.
+                                </strong></p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="my-3" id="obj-gen">
+                <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+                    <h3>Objetivo General<h3>
+                </div>
+
+                <div>
+                    <div class="bd-example-snippet bd-code-snippet">
+                        <div class="bd-example m-0 border-0">
+                            <p class="lead"><strong>
+                                    Comprender los aspectos clave de la ingeniería social analizando sus técnicas,
+                                    impacto y mitigación con el fin de contribuir el conocimiento de los ataques de
+                                    ingeniería social en diferentes contextos.
+                                </strong></p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="my-3" id="obj-esp">
+                <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+                    <h3>Objetivos Específicos<h3>
+                </div>
+
+                <div>
+                    <div class="bd-example-snippet bd-code-snippet">
+                        <div class="bd-example m-0 border-0">
+                            <ul>
+                                <li>
+                                    <p class="lead"><strong>Crear una página web para difundir información acerca del
+                                            tema. </strong></p>
+                                </li>
+                                <li>
+                                    <p class="lead"><strong>Desarrollar una interfaz de usuario amigable y fácil de usar
+                                            para que los usuarios puedan navegar y encontrar información de manera
+                                            sencilla. </strong></p>
+                                </li>
+                                <li>
+                                    <p class="lead"><strong>Evaluar casos de estudio de ataques exitosos en la
+                                            ingeniería social. </strong></p>
+                                </li>
+                                <li>
+                                    <p class="lead"><strong>Observar las implicaciones éticas y legales de la ingeniería
+                                            social. </strong></p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="my-3" id="hipotesis">
+                <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+                    <h3>Hipótesis<h3>
+                </div>
+
+                <div>
+                    <div class="bd-example-snippet bd-code-snippet">
+                        <div class="bd-example m-0 border-0">
+                            <h4>Hipótess General</h4>
+                            <p class="lead"><strong>
+                                    El 80% de los estudiantes del ITS no saben que es la ingeniería social.
+                                </strong></p>
+                            <h4>Hipótess Específicas</h4>
+                            <ul>
+                                <li>
+                                    <p class="lead"><strong>Enfoque académico específico: Se enfoca en áreas académicas
+                                            específicas que no abordan directamente la ingeniería social, los
+                                            estudiantes podrían no estar expuestos a este concepto durante su formación.
+                                        </strong></p>
+                                </li>
+                                <li>
+                                    <p class="lead"><strong>Desconexión con la ciberseguridad. </strong></p>
+                                </li>
+                                <li>
+                                    <p class="lead"><strong>Enfoque en otras áreas de conocimiento: Los estudiantes
+                                            están ocupados con otras áreas de estudio o proyectos académicos, podrían no
+                                            dedicar tiempo a investigar sobre la ingeniería social por iniciativa
+                                            propia. </strong></p>
+                                </li>
+                                <li>
+                                    <p class="lead"><strong>Desinterés general: Los estudiantes podrían no considerar la
+                                            ingeniería social como un tema de interés personal o relevante para su
+                                            carrera, lo que podría llevar a la falta de conocimiento. </strong></p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="my-3" id="mc-introduccion">
+                <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+                    <h3>Introduccion</h3>
+                </div>
+
+                <div>
+                    <div class="bd-example-snippet bd-code-snippet">
+                        <div class="bd-example m-0 border-0">
+                            <p class="display-4">Marco Teórico</p>
+
+                            <p class="lead"><strong>
+                                    “Hecha la ley, hecha la trampa”. Conforme avanza la tecnología, se mejoran y
+                                    reestructuran los sistemas de seguridad avanzando a la par de ésta, pero también los
+                                    atacantes hacen lo mismo, desarrollan rápidamente formas de evadir los perímetros de
+                                    seguridad de las empresas apoyados en nuevos vectores de ataque o mejorando los ya
+                                    existentes por ejemplo el caso de las APT (Advanced persistent threat) que son
+                                    amenazas persistentes como la ingeniería social. Ésta no es algo nuevo, el fraude
+                                    como la famosa estafa nigeriana, timo 419 o timo nigeriano, llamado así porque la
+                                    mayor parte de estas estafas provienen de ese país, ya había explotado la inocencia
+                                    y los buzones postales de las víctimas desde antes de la existencia de la internet.
+                                    Dicho timo, consiste en motivar a la víctima con un premio o dinero inexistente y
+                                    persuadirla para que realice una consignación de dinero por adelantado “para
+                                    realizar los trámites pertinentes” como única condición para acceder al supuesto
+                                    dinero o premio. Las sumas solicitadas son bastante elevadas, pero insignificantes
+                                    comparadas con la suma de dinero o el gran premio que las víctimas esperan recibir.
+                                    Pues bien, este tipo de engaños ahora usan las Tics para lograr su cometido.
+                                    <br><br>
+
+                                    Hoy en día, uno de los activos más valiosos para las organizaciones es la
+                                    información. Compartir información con otras entidades, sugiere la mayoría de las
+                                    veces una invasión de la privacidad. <br><br>
+
+                                    Por lo tanto, las instituciones (gubernamentales, educativas, financieras, etc.)
+                                    buscan la manera de implementar controles de seguridad para proteger su información,
+                                    como circuitos de cámaras, cajas fuertes, firewalls, etc., medidas que además
+                                    resultan costosas. Sin embargo, hay un recurso inseguro que almacena información muy
+                                    sensible: la mente humana. Ya sea por olvido o por el reto que implica asegurar la
+                                    información dentro de las cabezas de sus empleados, las organizaciones no le prestan
+                                    mucha atención a este aspecto. <br><br>
+
+                                    Sin importar cuántos candados físicos o lógicos haya para proteger un activo, al dar
+                                    acceso a una persona, siempre existirá un riesgo humano presente, y, por tanto,
+                                    vulnerable a ingeniería social. <br><br>
+
+                                    La ingeniería social, como se mencionó anteriormente, es una amenaza persistente que
+                                    ha evolucionado con el tiempo. En la era digital, ha tomado nuevas formas y se ha
+                                    vuelto más sofisticada. Los atacantes utilizan técnicas de manipulación psicológica
+                                    para engañar a las personas y obtener acceso a información confidencial o sistemas
+                                    protegidos. A pesar de los avances en la tecnología de seguridad, la ingeniería
+                                    social sigue siendo una táctica efectiva debido a un eslabón débil en la cadena de
+                                    seguridad: el factor humano. <br><br>
+
+                                    El factor humano es, sin duda, el eslabón más débil en cualquier sistema de
+                                    seguridad. Los empleados pueden ser engañados para que revelen información
+                                    confidencial o realicen acciones que comprometan la seguridad de la organización.
+                                    Esto puede suceder a través de varias tácticas, como el phishing, el pretexto, el
+                                    tailgating y el shoulder surfing, por nombrar algunas. <br><br>
+
+                                    El phishing, por ejemplo, implica el envío de correos electrónicos fraudulentos que
+                                    parecen provenir de fuentes legítimas para engañar a los destinatarios y hacer que
+                                    revelen información personal o financiera. El pretexto, por otro lado, implica la
+                                    creación de un escenario falso para obtener información o acceso a un sistema.
+                                    <br><br>
+
+                                    Además de estas tácticas, los atacantes también pueden aprovechar las
+                                    vulnerabilidades humanas como la confianza, la curiosidad y el miedo para manipular
+                                    a las personas y obtener lo que quieren. Por ejemplo, pueden hacerse pasar por un
+                                    colega o un superior para solicitar información confidencial o acceso a ciertos
+                                    sistemas. <br><br>
+
+                                    Por lo tanto, es crucial que las organizaciones no solo implementen medidas de
+                                    seguridad tecnológicas, sino que también inviertan en la capacitación y
+                                    concientización de sus empleados sobre las amenazas de seguridad y cómo evitarlas.
+                                    Esto incluye la enseñanza de buenas prácticas de seguridad, como no compartir
+                                    contraseñas, verificar la autenticidad de los correos electrónicos antes de abrirlos
+                                    o hacer clic en los enlaces, y ser cautelosos al proporcionar información personal o
+                                    financiera. <br><br>
+
+                                    En resumen, mientras exista el factor humano en cualquier sistema de seguridad,
+                                    siempre habrá un riesgo inherente de ingeniería social. Por lo tanto, es imperativo
+                                    que las organizaciones adopten un enfoque integral para la seguridad que incluya
+                                    tanto medidas tecnológicas como humanas.
+                                </strong></p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="my-3" id="fundamentos">
+                <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+                    <h3>¿Qué es la ingeniería social?</h3>
+                </div>
+
+                <div>
+                    <div class="bd-example-snippet bd-code-snippet">
+                        <div class="bd-example m-0 border-0">
+                            <p class="display-4">Antecedentes</p>
+
+                            <p class="lead"><strong>
+                                    Podría definirse como la explotación de la seguridad de un sistema, orientada al
+                                    factor humano, no a la parte técnica ni tecnológica de la organización, mediante el
+                                    uso de técnicas de manipulación y engaños para obtener información sensible. La
+                                    información sensible no es más que datos personales e "intransferibles" de una
+                                    persona que la identifica en la red o en la vida real. Según laboratorios ESET “La
+                                    Ingeniería Social puede definirse como una acción o conducta social destinada a
+                                    conseguir información de las personas cercanas a un sistema. Es el arte de conseguir
+                                    de un tercero aquellos datos de interés para el atacante por medio de habilidades
+                                    sociales. Estas prácticas están relacionadas con la comunicación entre seres
+                                    humanos.”
+
+                                    No se puede hablar de ingeniería social sin citar al hacker considerado el más
+                                    peligroso del mundo en su época, el genio Kevin Mitnick especialista en ingeniería
+                                    social, fue el pionero en entender que las personas son activos de información y
+                                    pueden ser explotadas mediante técnicas psicológicas y de manipulación. Según su
+                                    opinión, la ingeniería social se basa en estos cuatro principios:
+                                </strong></p>
+                            <ol>
+                                <li>
+                                    <p class="lead"><strong>Todos queremos ayudar.</strong></p>
+                                </li>
+                                <li>
+                                    <p class="lead"><strong>El primer movimiento es siempre de confianza hacia el
+                                            otro.</strong></p>
+                                </li>
+                                <li>
+                                    <p class="lead"><strong>No nos gusta decir "No".</strong></p>
+                                </li>
+                                <li>
+                                    <p class="lead"><strong>A todos nos gusta que nos alaben.</strong></p>
+                                </li>
+                            </ol>
+
+                            <p class="lead"><strong>La ingeniería social, como se ha definido, es un método de ataque
+                                    que se centra en el factor humano en lugar de en la tecnología. Aunque los sistemas
+                                    de seguridad tecnológica pueden ser robustos y sofisticados, los humanos son
+                                    inherentemente vulnerables a la manipulación y el engaño. Esta es la premisa
+                                    fundamental de la ingeniería social.Los ingenieros sociales utilizan una variedad de
+                                    tácticas para manipular a las personas y obtener acceso a información confidencial.
+                                    Estas tácticas pueden variar desde el phishing, donde se envían correos electrónicos
+                                    fraudulentos que parecen provenir de fuentes legítimas, hasta el pretexto, donde se
+                                    crea un escenario falso para obtener información o acceso a un sistema. <br><br>
+
+                                    La ingeniería social también puede implicar la explotación de las tendencias
+                                    psicológicas humanas. Como señaló Kevin Mitnick, uno de los hackers más notorios del
+                                    mundo y un experto en ingeniería social, las personas tienen una tendencia natural a
+                                    querer ayudar, a confiar en los demás, a evitar decir no y a disfrutar de los
+                                    elogios. Los ingenieros sociales pueden aprovechar estas tendencias para manipular a
+                                    las personas y obtener lo que quieren. <br><br>
+
+                                    Además de estas tácticas, los ingenieros sociales también pueden utilizar la
+                                    recopilación de información o el espionaje para obtener información sobre sus
+                                    objetivos. Esto puede implicar la investigación en línea, la vigilancia física o
+                                    incluso el robo de documentos o dispositivos. Es importante destacar que la
+                                    ingeniería social no se limita al ámbito digital. También puede tener lugar en
+                                    entornos físicos. Por ejemplo, un ingeniero social puede hacerse pasar por un
+                                    empleado o un contratista para obtener acceso físico a un edificio o a áreas
+                                    restringidas. <br><br>
+
+                                    En resumen, la ingeniería social es una amenaza significativa para la seguridad de
+                                    la información que no debe pasarse por alto. Aunque las medidas de seguridad
+                                    tecnológica son esenciales, también es crucial abordar el factor humano mediante la
+                                    educación y la concienciación sobre las tácticas de ingeniería social y cómo
+                                    prevenirlas. </strong></p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="my-3" id="origen">
+                <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+                    <h3>Orígen y evolución del término</h3>
+                </div>
+
+                <div>
+                    <div class="bd-example-snippet bd-code-snippet">
+                        <div class="bd-example m-0 border-0">
+                            <p class="lead"><strong>
+                                    A finales del siglo XIX, el empresario y filántropo holandés J. C. van Marken se
+                                    destacó como pionero en la promoción de un concepto que, con el tiempo, se conocería
+                                    como Ingeniería Social. En 1894, van Marken comenzó a desarrollar la idea de abordar
+                                    el trato emocional de los empleados en las industrias, un aspecto que en ese momento
+                                    era en gran medida desatendido. La noción de un departamento de Recursos Humanos,
+                                    tal como lo conocemos en la actualidad, simplemente no existía en esa época.
+                                    <br><br>
+
+                                    En su forma inicial, la Ingeniería Social se planteó como un enfoque destinado a
+                                    ayudar al ser humano en el entorno laboral. Los ingenieros sociales, en su mayoría,
+                                    asumían la responsabilidad de lidiar con los problemas personales de los empleados
+                                    en las empresas en las que estaban asignados. Su principal objetivo era mantener el
+                                    rendimiento laboral a través de la atención y el apoyo a las necesidades emocionales
+                                    y personales de los trabajadores. <br><br>
+
+                                    Con el paso del tiempo, el concepto de Ingeniería Social comenzó a evolucionar y, en
+                                    algunos casos, a deformarse. Uno de los puntos de inflexión en su evolución se dio
+                                    cuando Edward L. Bernays, un influyente publicista y periodista, utilizó la
+                                    Ingeniería Social de una manera radicalmente diferente. Bernays la consideraba como
+                                    una herramienta para dirigir y manipular a las masas, a las que consideraba
+                                    indisciplinadas y carentes de principios morales. <br><br>
+
+                                    Edward L. Bernays cambió fundamentalmente el propósito original de la Ingeniería
+                                    Social. En lugar de ser un enfoque para el bienestar de los empleados, lo convirtió
+                                    en un medio para influir en las personas de acuerdo con sus intereses. Bernays
+                                    utilizó la Ingeniería Social como una estrategia para controlar la percepción
+                                    pública y, en última instancia, para manipular a las personas a su conveniencia,
+                                    especialmente en el contexto de la publicidad y la propaganda. <br><br>
+
+                                    La evolución de la Ingeniería Social desde sus raíces benevolentes hasta su uso en
+                                    la manipulación masiva plantea cuestiones éticas y morales importantes. La
+                                    Ingeniería Social, en su sentido más amplio, sigue siendo una disciplina que busca
+                                    comprender y gestionar las interacciones humanas en una variedad de contextos. Sin
+                                    embargo, su uso puede variar ampliamente, y es fundamental reflexionar sobre sus
+                                    implicaciones éticas. <br><br>
+
+                                    En la era actual, la Ingeniería Social se ha convertido en una parte esencial de la
+                                    ciberseguridad, donde se enfoca en la manipulación de individuos para obtener
+                                    información confidencial. Además, en el ámbito de la psicología y la sociología, se
+                                    utiliza para entender y mejorar las interacciones humanas. La historia de la
+                                    Ingeniería Social destaca la importancia de considerar la ética y la responsabilidad
+                                    en su aplicación, ya que puede ser una herramienta tanto para el bien como para la
+                                    manipulación. <br><br>
+
+                                    La Ingeniería Social ha experimentado una evolución desde su origen centrado en el
+                                    bienestar de los empleados hasta su uso en la manipulación de masas. Esta evolución
+                                    plantea preguntas importantes sobre cómo se utiliza y se abusa de esta disciplina,
+                                    destacando la necesidad de un enfoque ético en su aplicación y considerando su
+                                    impacto en la sociedad.
+                                </strong></p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="my-3" id="informatica">
+                <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+                    <h3>Impacto en informática</h3>
+                </div>
+
+                <div>
+                    <div class="bd-example-snippet bd-code-snippet">
+                        <div class="bd-example m-0 border-0">
+                            <p class="lead"><strong>
+                                    El primero en usar el término “Ingeniería Social” en el ámbito de la seguridad
+                                    informática fue el hasta hoy reconocido como el mejor hacker del mundo, Kevin
+                                    Mitnick, quien sostiene que la Ingeniería Social se refiere a la aplicación de
+                                    técnicas, que los hackers utilizan para engañar a un usuario autorizado de sistemas
+                                    informáticos de una compañía para que revele información sensitiva, o para lograr
+                                    que de forma insospechada realice acciones que creen un hueco de seguridad que pueda
+                                    ser explotado. El fin del atacante que aplica ingeniería social es el de explotar al
+                                    eslabón más débil de la organización, el usuario. Dependiendo de su osadía, el
+                                    atacante puede utilizar herramientas tecnológicas o incluso los encuentros cara a
+                                    cara para obtener la información que necesita. Es importante reconocer que, no
+                                    solamente el usuario de los sistemas está expuesto a sufrir un ataque de Ingeniería
+                                    Social; el mismo personal de seguridad informática está expuesto e igual de
+                                    vulnerable
+
+                                    Es importante entonces decir que la ingeniería social podría presentarse de dos
+                                    maneras: una es interactuando con máquinas y software y la otra basada en el ser
+                                    humano. En la actualidad los ataques de ingeniería social utilizan las dos maneras
+                                    para potenciar los resultados, esta combinación es letal para una víctima que por lo
+                                    general en ocasiones no es consciente de que está siendo atacado por esta técnica.
+                                </strong></p>
+
+                            <h4>Dos Caras de la Ingeniería Social </h4>
+                            <p class="lead"><strong>La Ingeniería Social en informática puede manifestarse de dos
+                                    maneras fundamentales: la interacción con máquinas y software, y la interacción con
+                                    seres humanos. En la actualidad, los ataques de Ingeniería Social a menudo combinan
+                                    ambas modalidades, lo que los hace aún más efectivos y peligrosos. Esta convergencia
+                                    de enfoques crea una situación especialmente crítica para las víctimas, que a menudo
+                                    no son conscientes de que están siendo objeto de ataques basados en esta técnica.
+                                </strong></p>
+
+                            <h4>Ataques a Nivel Tecnológico: La Ingeniería Social Cibernética </h4>
+                            <p class="lead"><strong>En la vertiente tecnológica de la Ingeniería Social, los atacantes
+                                    recurren a tácticas de persuasión, engaño y manipulación para obtener información o
+                                    acceso a sistemas informáticos. Estos ataques pueden llevarse a cabo a través de
+                                    métodos como la suplantación de identidad (phishing), el uso de malware disfrazado
+                                    como software legítimo y la explotación de la curiosidad del usuario para inducirlo
+                                    a hacer clic en enlaces maliciosos. En este enfoque, la Ingeniería Social se
+                                    aprovecha de la interacción entre el usuario y la tecnología para infiltrarse en
+                                    sistemas y redes. </strong></p>
+
+                            <h4>Ataques a Nivel Humano: La Ingeniería Social Psicológica </h4>
+                            <p class="lead"><strong>Por otro lado, la Ingeniería Social basada en el ser humano implica
+                                    la manipulación directa de las personas para obtener información confidencial o
+                                    acceso a sistemas. Esto puede implicar la persuasión, el engaño o la explotación de
+                                    la confianza del objetivo. Los atacantes pueden hacerse pasar por empleados,
+                                    técnicos de soporte, o incluso amigos y familiares para obtener información que no
+                                    deberían tener acceso. Esta modalidad de Ingeniería Social se vale de la psicología
+                                    y las interacciones humanas para lograr sus objetivos. </strong></p>
+
+                            <h4>La Combinación Mortal: Ataques Híbridos de Ingeniería Social </h4>
+                            <p class="lead"><strong>La amenaza de la Ingeniería Social en la actualidad radica en la
+                                    combinación de ambas modalidades. Los atacantes utilizan la tecnología para
+                                    respaldar sus intentos de manipulación psicológica. Por ejemplo, un atacante podría
+                                    enviar un correo electrónico de phishing altamente convincente que, al ser abierto,
+                                    instala malware en la computadora de la víctima. De esta manera, se fusionan los
+                                    aspectos técnicos y psicológicos de la Ingeniería Social, lo que hace que estos
+                                    ataques sean aún más difíciles de detectar y resistir. <br><br>
+
+                                    En resumen, la Ingeniería Social en informática es una táctica de ataque sofisticada
+                                    que se ha convertido en un desafío significativo para la ciberseguridad. Tanto
+                                    usuarios como profesionales de seguridad informática deben ser conscientes de la
+                                    existencia de esta amenaza y estar preparados para defenderse contra ella mediante
+                                    la educación, la concienciación y el uso de medidas de seguridad sólidas</strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="my-3" id="seguridad">
+                <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+                    <h3>Ingeniería Social y Seguridad Informática</h3>
+                </div>
+
+                <div>
+                    <div class="bd-example-snippet bd-code-snippet">
+                        <div class="bd-example m-0 border-0">
+                            <p class="lead"><strong>
+                                    La seguridad de la información es un pilar fundamental en la actualidad, con el
+                                    objetivo de salvaguardar la integridad, confidencialidad y disponibilidad de los
+                                    activos de información en cualquier organización. Estos activos pueden ser datos
+                                    críticos, procesos vitales o cualquier recurso digital de valor. Sin embargo, en el
+                                    contexto de la seguridad informática, la importancia de considerar a las personas
+                                    como uno de estos activos se ha vuelto cada vez más relevante. Las personas, como
+                                    usuarios y administradores de sistemas, poseen un conocimiento crítico sobre los
+                                    procesos, almacenan información sensible y pueden ser un punto de acceso para
+                                    posibles amenazas. <br><br>
+
+                                    En este sentido, la relación entre la ingeniería social y la seguridad informática
+                                    adquiere una significativa importancia. La ingeniería social es una técnica que
+                                    busca explotar la naturaleza humana para acceder a información confidencial o
+                                    comprometer la seguridad de sistemas. A menudo, implica manipular a individuos para
+                                    obtener información, acceso o realizar acciones no autorizadas. Cuando se compara
+                                    con los ataques dirigidos a la infraestructura de una organización, los ataques de
+                                    ingeniería social pueden presentar una serie de ventajas que los hacen especialmente
+                                    atractivos para los atacantes. <br><br>
+
+                                    Un ataque dirigido a la infraestructura, que involucra técnicas avanzadas de
+                                    penetración y hacking, puede ser costoso y demandar un tiempo considerable. Requiere
+                                    una planificación exhaustiva, incluyendo la recopilación de información pasiva antes
+                                    de intentar vulnerar la seguridad de la red. Además, si la organización tiene una
+                                    topología de red segura, varios anillos de seguridad complicarán aún más el proceso.
+                                    La ejecución del ataque es una tarea delicada, ya que el intruso debe tener un
+                                    profundo conocimiento de software libre y herramientas de penetración para evitar
+                                    generar alarmas y minimizar el ruido que podría dejar evidencias. También debe estar
+                                    familiarizado con la tecnología específica utilizada dentro de la organización que
+                                    se está infiltrando. <br><br>
+
+                                    En contraste, cuando un ataque se dirige a los activos de información humanos, a
+                                    través de métodos de ingeniería social, el proceso de investigación, planificación y
+                                    ejecución del ataque es similar. Sin embargo, el consumo de recursos se reduce
+                                    drásticamente. Al atacar directamente al usuario, el atacante evita las complejas
+                                    capas de seguridad tecnológica y de red que normalmente protegen la infraestructura.
+                                    Es como si el atacante realizara un "bypass" a todo el sistema de seguridad al
+                                    enfocarse en la debilidad humana en lugar de las defensas tecnológicas. <br><br>
+
+                                    Esta relación entre la ingeniería social y la seguridad informática subraya la
+                                    importancia de abordar la concienciación y la educación en ciberseguridad entre los
+                                    usuarios y el personal de la organización. Además, destaca la necesidad de contar
+                                    con políticas de seguridad robustas que incluyan la capacitación y la implementación
+                                    de controles para mitigar el riesgo de ataques de ingeniería social. La comprensión
+                                    de la psicología humana y de las técnicas de ingeniería social es esencial para
+                                    proteger los activos de información en un entorno de ciberseguridad en constante
+                                    evolución. <br><br>
+                                    Se describe el proceso a continuación: <br> <br>
+
+                                    Social Engineering path: Ataque directo al usuario, evadiendo todos sistemas de
+                                    control y tecnologías de seguridad. <br> <br>
+
+                                    Traditional hacker path: Ataque directo a la infraestructura, romper todos y cada
+                                    uno de los anillos de seguridad. <br> <br>
+                                </strong></p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="my-3" id="motivadores">
+                <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+                    <h3>Motivadores</h3>
+                </div>
+
+                <div>
+                    <div class="bd-example-snippet bd-code-snippet">
+                        <div class="bd-example m-0 border-0">
+                            <p class="lead"><strong>
+                                    Considerando que los ataques de Ingeniería Social están basados en el estudio del
+                                    comportamiento humano, entonces la principal premisa es: “¿Por qué crackear una
+                                    contraseña cuando simplemente se puede preguntar por ella?”. Según el Dr. Robert
+                                    Cialdini, existen motivadores básicos en las personas por medio de los cuales se
+                                    invita a alguien a actuar:
+                                </strong></p>
+                            <ol>
+                                <li>
+                                    <p class="lead"><strong>Reciprocidad: la gente siempre siente que le debe un favor a
+                                            aquellos que han hecho algo por ellos. Sobre todo, cuando lo que se hizo es
+                                            algo significativo, inesperado y personalizado. </strong></p>
+                                </li>
+                                <li>
+                                    <p class="lead"><strong>Orientación Social: siempre buscamos un modelo a seguir, a
+                                            alguien que nos oriente o nos diga lo que tenemos que hacer.</strong></p>
+                                </li>
+                                <li>
+                                    <p class="lead"><strong>Consistencia / Compromiso: desarrollamos patrones de
+                                            conducta que se convierten en hábitos y nos comprometemos con ellos como
+                                            modo de vida.</strong></p>
+                                </li>
+                                <li>
+                                    <p class="lead"><strong>Aceptación: queremos “encajar” en determinado escenario y al
+                                            buscar la aceptación nos dejamos persuadir por aquellas personas que nos
+                                            gustan o admiramos.</strong></p>
+                                </li>
+                                <li>
+                                    <p class="lead"><strong>Autoridad: somos receptivos a las órdenes y peticiones de
+                                            las personas que representan autoridad jerárquica.</strong></p>
+                                </li>
+                                <li>
+                                    <p class="lead"><strong>Tentación: tendemos a conseguir aquello que está limitado o
+                                            prohibido para nosotros, incluso, realizando acciones que en situaciones o
+                                            escenarios cotidianos no haríamos.</strong></p>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="my-3" id="tecnicas">
+                <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+                    <h3>Técnicas de Ingeniería Social en la Seguridad Informática</h3>
+                </div>
+
+                <div>
+                    <div class="bd-example-snippet bd-code-snippet">
+                        <div class="bd-example m-0 border-0">
+                            <p class="lead"><strong>
+                                    Basado en los motivadores del ser humano, propuestos por el Dr. Robert Cialdini,
+                                    existen diversas técnicas utilizadas para realizar ataques de Ingeniería Social,
+                                    tales como:
+                                </strong></p>
+
+                            <ol>
+                                <li>
+                                    <p class="lead"><strong>Baiting: esta técnica juega mucho con la psique humana. El
+                                            atacante puede dejar un dispositivo que contenga un virus o malware, como
+                                            una memoria USB, en algún área para que cualquier persona de la organización
+                                            pueda encontrarla. La víctima seguramente la conectará a su computadora para
+                                            revisar que pueda tener la memoria y en ese momento es cuando el malware
+                                            puede ser inyectado al sistema.</strong></p>
+                                </li>
+                                <li>
+                                    <p class="lead"><strong>Phishing: posiblemente una de las técnicas más viejas, pero
+                                            también una de las más efectivas, ya que los atacantes tratan de utilizar
+                                            diferentes niveles de influencia a través de correos electrónicos que
+                                            aparentan ser de una compañía legítima, como un banco, una institución de
+                                            gobierno, entre otras.</strong></p>
+                                </li>
+                                <li>
+                                    <p class="lead"><strong>IVR o Phone Phishing: esta técnica utiliza una copia del
+                                            sistema IVR (Respuesta de Voz Interactiva, por sus siglas en inglés) de un
+                                            banco o cualquier otra institución. La víctima es manipulada (por lo
+                                            general, con un ataque de phishing) para que realice una llamada telefónica
+                                            a un número gratuito para, por ejemplo, hacer una verificación de la
+                                            información de su cuenta bancaria. Por lo general, estos sistemas rechazarán
+                                            de forma intencionada el ingreso de las credenciales del usuario, con el
+                                            objetivo de que éste introduzca su PIN varias veces. Algunos atacantes más
+                                            avanzados y arriesgados trasladan las llamadas a “agentes de call center”
+                                            para cuestionar puntos específicos a los usuarios.</strong></p>
+                                </li>
+                                <li>
+                                    <p class="lead"><strong>Quid Pro Quo: esta técnica se basa en que el atacante
+                                            promete algún beneficio a la víctima a cambio de información sensible de la
+                                            organización o del mismo usuario. Por ejemplo, el atacante podría haber
+                                            investigado alguna carencia sobre algún sistema de uso diario en la
+                                            organización y puede llamar a un usuario haciéndose pasar por personal de
+                                            soporte técnico para “solventar ese problema” pero para hacerlo, le pide a
+                                            cambio las credenciales de inicio de sesión a dicho sistema. </strong></p>
+                                </li>
+                                <li>
+                                    <p class="lead"><strong>Pretexting: es una de las técnicas más elaboradas, ya que el
+                                            atacante debe crear un buen pretexto o incluso, un buen escenario para poder
+                                            robar información importante y sensible a la víctima, al contrario del
+                                            phishing que lo que busca es generar miedo en la mayoría de los casos, el
+                                            pretexting busca ganarse la confianza de la víctima.</strong></p>
+                                </li>
+                                <li>
+                                    <p class="lead"><strong>Farming: con esta técnica, el atacante busca crear una
+                                            relación personal con la víctima, creando un entorno de confianza basado en
+                                            la información que el atacante ha investigado de su objetivo, donde las
+                                            principales fuentes de información son las redes sociales. Este es un ataque
+                                            un poco más complejo, ya que se pueden utilizar otras técnicas en conjunto
+                                            para que el ataque sea más efectivo.</strong></p>
+                                </li>
+                                <li>
+                                    <p class="lead"><strong>Vishing: obtienen información a través de una llamada
+                                            telefónica. El ciberdelincuente se hace pasar por un familiar, personal de
+                                            una empresa o de soporte técnico.</strong></p>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="my-3" id="categorias">
+                <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+                    <h3>Categorías de ataque</h3>
+                </div>
+
+                <div>
+                    <div class="bd-example-snippet bd-code-snippet">
+                        <div class="bd-example m-0 border-0">
+                            <p class="lead"><strong>
+                                    Ataques técnicos:
+                                </strong></p>
+                            <ul>
+                                <li>
+                                    <p class="lead"><strong>No existe contacto directo con las víctimas.</strong></p>
+                                </li>
+                                <li>
+                                    <p class="lead"><strong>El atacante utiliza emails, páginas web, boletines.</strong>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="lead"><strong>El atacante simula ser una entidad reconocida y de
+                                            confianza.</strong></p>
+                                </li>
+                                <li>
+                                    <p class="lead"><strong>Orientado a obtener información sensible de los
+                                            usuarios</strong></p>
+                                </li>
+                                <li>
+                                    <p class="lead"><strong>Altamente exitoso</strong></p>
+                                </li>
+                            </ul>
+
+                            <p class="lead"><strong>
+                                    Ataques al ego:
+                                </strong></p>
+                            <ul>
+                                <li>
+                                    <p class="lead"><strong>El atacante apela a la vanidad y ego de la víctima.</strong>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="lead"><strong>La víctima trata de probar su inteligencia y
+                                            eficacia.</strong></p>
+                                </li>
+                                <li>
+                                    <p class="lead"><strong>Se busca que la víctima sienta que está ayudando en un tema
+                                            relevante (y que posiblemente recibirá reconocimiento)</strong></p>
+                                </li>
+                                <li>
+                                    <p class="lead"><strong>Usualmente la víctima nunca se da cuenta del
+                                            ataque.</strong></p>
+                                </li>
+                            </ul>
+                            <p class="lead"><strong>
+                                    Ataques de simpatía:
+                                </strong></p>
+                            <ul>
+                                <li>
+                                    <p class="lead"><strong>Se simula un escenario donde es urgente completar una tarea
+                                            o actividad. </strong></p>
+                                </li>
+                                <li>
+                                    <p class="lead"><strong>Se apela a la empatía de la víctima. </strong></p>
+                                </li>
+                                <li>
+                                    <p class="lead"><strong>El atacante pide ayuda hasta que encuentra a alguien que le
+                                            pueda proporcionar lo que necesita. </strong></p>
+                                </li>
+                                <li>
+                                    <p class="lead"><strong>El atacante se muestra bastante desesperado, indicando que
+                                            su trabajo está en juego si no completa su tarea. </strong></p>
+                                </li>
+                            </ul>
+                            <p class="lead"><strong>
+                                    Ataques de intimidación:
+                                </strong></p>
+                            <ul>
+                                <li>
+                                    <p class="lead"><strong>El atacante simula ser alguien importante en la
+                                            organización</strong></p>
+                                </li>
+                                <li>
+                                    <p class="lead"><strong>Trata de utilizar su autoridad para forzar a la víctima a
+                                            cooperar.</strong></p>
+                                </li>
+                                <li>
+                                    <p class="lead"><strong>Si existe resistencia utiliza la intimidación y amenazas
+                                            (pérdida de empleo, multas, cargos legales, etc.).</strong></p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="my-3" id="efectos">
+                <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+                    <h3>Efectos de los ataques</h3>
+                </div>
+
+                <div>
+                    <div class="bd-example-snippet bd-code-snippet">
+                        <div class="bd-example m-0 border-0">
+                            <p class="lead"><strong>
+                                    En la mayoría de los casos, el uso de técnicas de Ingeniería Social solamente
+                                    representa el principio del ataque en sí. Recordemos que lo que se busca, es
+                                    vulnerar la seguridad de la infraestructura informática y una vez alcanzado el
+                                    objetivo, la posibilidad de ataques a realizar puede volverse hasta infinita y con
+                                    distintas variantes. No los mencionaremos a todos, pero algunos virus y malware que
+                                    los atacantes utilizan una vez cumplido el objetivo de la Ingeniería Social son los
+                                    siguientes:
+                                </strong></p>
+
+                            <ol>
+                                <li>
+                                    <p class="lead"><strong>Bombas Lógicas: son aplicaciones o parte de una aplicación
+                                            que espera que se cumplan una o más condiciones pre-programadas para que, en
+                                            ese momento se ejecute la acción maliciosa. Por ejemplo, si se engañó al
+                                            usuario para que descargara una aplicación para “eliminar” cualquier spyware
+                                            de su equipo, la bomba lógica podría estar programada para que se ejecute
+                                            luego de haber hecho el primer escaneo a la computadora. Entre las acciones
+                                            maliciosas que una bomba lógica puede realizar están: eliminar información
+                                            del disco duro, esparcir virus en el pc que se aloja y en las que estén
+                                            conectadas a la red, dejar puertos abiertos, entre otros.</strong></p>
+                                </li>
+                                <li>
+                                    <p class="lead"><strong>Backdoors: permiten al atacante tener acceso al sistema
+                                            evitando los algoritmos de seguridad (autentificación) para poder acceder a
+                                            él. En la mayoría de los casos, las puertas traseras o backdoors son
+                                            utilizados con fines maliciosos y generados por el atacante, incluso,
+                                            existen fabricantes de software que en sus aplicaciones incluyen backdoors
+                                            secretos para que sean utilizados como medios de conexión al momento de
+                                            realizar soporte a los sistemas, convirtiéndose en una vulnerabilidad fácil
+                                            de explotar dentro de la infraestructura de informática.</strong></p>
+                                </li>
+                                <li>
+                                    <p class="lead"><strong>Troyanos: tomando como referencia la historia del Caballo de
+                                            Troya, estos virus se caracterizan por aparentar ser aplicaciones buenas
+                                            pero que internamente pueden contener algún elemento malicioso (por ejemplo,
+                                            una bomba lógica). Se encuentra comúnmente en aplicaciones de descarga
+                                            directa, P2P, en generadores de llaves de instalación de productos, juegos
+                                            descargados ilegalmente, entre otros. Una vez que la aplicación o el archivo
+                                            residen en la computadora de la víctima, se pueden generar estragos en el
+                                            sistema sin que el usuario se percate.</strong></p>
+                                </li>
+                                <li>
+                                    <p class="lead"><strong>Botnets: es el conjunto o red de robots controlados por el
+                                            atacante. Cuando una computadora es infectada, esta pasa a formar parte de
+                                            esta red para que el atacante la utilice para los fines que él necesita; por
+                                            lo general, las botnets son utilizadas para hacer envío de spam, generar
+                                            ataques de denegación de servicios, instalar keyloggers o cualquier otro
+                                            malware en la red, o utilizar las características de hardware de los equipos
+                                            que pertenecen a la botnet para aumentar la capacidad de cálculo. Kevin
+                                            Mitnick utilizó, lo que en la actualidad sería catalogado como una botnet,
+                                            para poder descifrar un potente algoritmo de seguridad diseñado por Tsutomu
+                                            Shimomura, que protegía un software para el control de teléfonos móviles y
+                                            varias herramientas de seguridad en internet.</strong></p>
+                                </li>
+                                <li>
+                                    <p class="lead"><strong>Ransomware: Es una aplicación que realiza un secuestro de la
+                                            información en la computadora de la víctima pidiendo un rescate por ella.
+                                            Una vez que el ransomware está alojado en el equipo, comienza a encriptar
+                                            los archivos que el usuario comúnmente utiliza para realizar sus actividades
+                                            diarias: archivos pdf, doc, xls, jpg y similares, generando un cifrado de
+                                            tipo asíncrono, donde se genera una llave privada y una llave pública. Una
+                                            de estas llaves tiene la capacidad de encriptar los archivos y la otra de
+                                            desencriptarlos, por lo que, el atacante, almacena la llave que se utilizará
+                                            para desencriptar los archivos, en un servidor externo, no accesible para la
+                                            víctima. Una vez que el pago se haya realizado, según el atacante, se le
+                                            entregará la llave de desencriptación a la víctima para que recupere sus
+                                            archivos. Existe un plazo de tiempo para realizar el pago del rescate, de
+                                            excederse el tiempo, el atacante amenaza con eliminar la llave de
+                                            desencriptación, que, de suceder, será imposible eliminar el algoritmo de
+                                            cifrado aplicado a los archivos.</strong></p>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="my-3" id="recomendaciones">
+                <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+                    <h3>Recomendaciones</h3>
+                </div>
+
+                <div>
+                    <div class="bd-example-snippet bd-code-snippet">
+                        <div class="bd-example m-0 border-0">
+                            <p class="lead"><strong>
+                                    La mejor manera de enfrentar el problema es concientizar a las personas al respecto.
+                                    Educarles sobre seguridad y fomentar la adopción de medidas preventivas. Otros
+                                    mecanismos sugeridos son:
+                                </strong></p>
+
+                            <ul>
+                                <li>
+                                    <p class="lead"><strong>Nunca divulgar información sensible con desconocidos o en
+                                            lugares públicos (como redes sociales, anuncios, páginas web,
+                                            etc.).</strong></p>
+                                </li>
+                                <li>
+                                    <p class="lead"><strong>Si se sospecha que alguien intenta realizar un engaño, hay
+                                            que exigir se identifique y tratar de revertir la situación intentando
+                                            obtener la mayor cantidad de información del sospechoso.</strong></p>
+                                </li>
+                                <li>
+                                    <p class="lead"><strong>Realizar rutinariamente auditorías y pentest usando
+                                            Ingeniería Social para detectar huecos de seguridad de esta
+                                            naturaleza.</strong></p>
+                                </li>
+                                <li>
+                                    <p class="lead"><strong>Realizar acciones defensivas: Es importante educar al
+                                            usuario para que sepa cómo prevenir un ataque de Ingeniería Social o qué
+                                            hacer al momento de encontrarse con un posible ataque. Debe proveerse de
+                                            lineamientos y políticas que deben seguir para evitar convertirse en
+                                            víctimas, como por ejemplo: no descargar ni abrir archivos adjuntos de
+                                            correos electrónicos de remitentes desconocidos o dudosos; no dar clic sobre
+                                            enlaces sin antes haber verificado hacia dónde realmente redireccionan los
+                                            mismos; no ingresar a sitios web de dudosa reputación; no complementar
+                                            información en formularios que no aparenten ser seguros; no compartir con
+                                            nadie sus credenciales de inicio de sesión, incluyendo el personal de
+                                            informática, nadie más que el usuario debe conocerlas; mantener
+                                            actualizados, tanto el sistema operativo, las aplicaciones así como los
+                                            software antivirus, entre otras. </strong></p>
+                                </li>
+                                <li>
+                                    <p class="lead"><strong>Realizar pruebas de penetración en la infraestructura de
+                                            seguridad de la organización:
+
+                                            Es importante dimensionar el nivel de seguridad configurado en la
+                                            infraestructura de la organización, para ello, se deben realizar pruebas de
+                                            penetración para encontrar las vulnerabilidades que puedan existir con el
+                                            objetivo de solventarlas o por lo menos reducirlas. El mismo personal de
+                                            informática puede encargarse de llevar a cabo estas pruebas, pero es
+                                            recomendable que se contraten agentes externos para que lo hagan,
+                                            garantizando que los resultados obtenidos de las pruebas servirán para
+                                            mejorar las medidas de seguridad adoptadas por la organización. Solamente
+                                            conociendo las vulnerabilidades que tenemos sabremos como contrarrestar las
+                                            amenazas. </strong></p>
+                                </li>
+                                <li>
+                                    <p class="lead"><strong>Vivir una filosofía de seguridad:
+
+                                            No se trata de entrar en paranoia sobre la seguridad informática, pero es
+                                            necesario que la seguridad se convierta en una filosofía de vida en la
+                                            organización, que tanto los usuarios de los sistemas como el personal de
+                                            informática permanezca en constante vigilancia sobre los posibles ataques de
+                                            Ingeniería Social de los que podrían ser víctima; continuamente se deben
+                                            realizar talleres, charlas, capacitaciones y aplicación de nuevas formas de
+                                            prevención de ataques según la evolución que estos tengan; hacer sentir a
+                                            los usuarios que forman parte activa de la organización, los llevará a usar
+                                            con responsabilidad los sistemas de información. </strong></p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="my-3" id="proteccion">
+                <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+                    <h3>Cómo protegerse de ataques de ingeniería social</h3>
+                </div>
+
+                <div>
+                    <div class="bd-example-snippet bd-code-snippet">
+                        <div class="bd-example m-0 border-0">
+                            <ol>
+                                <li>
+                                    <h5>Utilizar autenticación multifactor <br></h5>
+                                    <p class="lead"><strong>Es importante que las cuentas en línea tengan como
+                                            protección algo más que una contraseña. La autenticación multifactor añade
+                                            capas de seguridad para verificar la identidad al acceder a una cuenta.
+                                            Estos factores pueden ser huellas dactilares, reconocimiento facial o
+                                            códigos temporales enviados al dispositivo móvil privado. De esta manera,
+                                            impedirá que cualquiera acceda a la cuenta o que, al menos, le cueste más.
+                                        </strong></p>
+                                </li>
+                                <li>
+                                    <h5>Establecer filtros altos de spam<br></h5>
+                                    <p class="lead"><strong>Si bien todos los servicios de mensajería de correo
+                                            electrónico tienen activada la bandeja de spam, lo mejor es verificar que su
+                                            nivel de funcionamiento sea alto para evitar que correos maliciosos inunden
+                                            la bandeja de entrada principal. Recuerda revisar de forma constante que los
+                                            mensajes reales o importantes no caigan ahí por error. </strong></p>
+                                </li>
+                                <li>
+                                    <h5>Usar VPN<br></h5>
+                                    <p class="lead"><strong>Una red privada virtual (VPN) evita que cualquier persona
+                                            que quiera acceder a la red principal de alguien más lo consiga. Estos
+                                            servicios facilitan un túnel privado y encriptado para cualquier conexión de
+                                            internet utilizada. Así, no solo la conexión está protegida, sino también
+                                            los datos y la información personal, puesto que se vuelven anónimos e
+                                            imposibles de rastrear. Esto es funcional hasta para las navegaciones en
+                                            donde se utilizan cookies de terceros. </strong></p>
+                                </li>
+                                <li>
+                                    <h5>Mantener los softwares actualizados<br></h5>
+                                    <p class="lead"><strong>Cuando un software se mantiene actualizado con sus nuevas
+                                            versiones, este se mantiene protegido y garantiza las correcciones de
+                                            seguridad esenciales para resguardar su información. No obstante, al
+                                            retrasarse u omitirse se deja un hueco de seguridad que los
+                                            ciberdelincuentes pueden utilizar para atacar y aprovechar esta
+                                            vulnerabilidad. </strong></p>
+                                </li>
+                                <li>
+                                    <h5>Monitorear constantemente los sistemas y redes<br></h5>
+                                    <p class="lead"><strong>También es importante que los sistemas tengan un monitoreo
+                                            las 24 horas del día, sobre todo aquellos que albergan información
+                                            confidencial. Para eso son los escaneos, tanto externos como internos, que
+                                            sirven para encontrar vulnerabilidades en la red. Asimismo, este proceso
+                                            puede identificar dominios falsos y eliminarlos al instante para evitar una
+                                            infracción de la información.</strong></p>
+                                </li>
+                                <li>
+                                    <h5>Utilizar WAF basado en la nube<br></h5>
+                                    <p class="lead"><strong>Un Web Application Firewall (WAF) basado en la nube ofrece
+                                            más protección que un firewall convencional, pues está diseñado para
+                                            garantizar la máxima protección contra los ataques de ingeniería social.
+                                            Estos pueden monitorear aplicaciones o sitios web con regularidad para
+                                            buscar anomalías o malos comportamientos. En caso de detectar algo negativo,
+                                            bloquea los ataques al instante y emite alertas sobre cualquier intento de
+                                            instalación de malware. Nunca hay que dar por hecho que jamás se sufrirá un
+                                            ataque de ingeniería social, ya que existen muchas variantes enfocadas en
+                                            diferentes objetivos: un empleado, un usuario de redes sociales o hasta el
+                                            director de una prestigiosa compañía. Lo mejor es mantenerse alerta y pensar
+                                            antes de dar un clic o compartir información confidencial a cualquier
+                                            persona, sea por el medio que sea. </strong></p>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="my-3" id="glosario">
+                <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+                    <h3>Glosario de términos</h3>
+                </div>
+
+                <div>
+                    <div class="bd-example-snippet bd-code-snippet">
+                        <div class="bd-example m-0 border-0">
+
+                            <ul>
+                                <li>
+                                    <p class="lead"><strong><em>Persuasión: <br></em>La persuasión es un proceso de
+                                            comunicación en el que un individuo intenta convencer a otro de que adopte
+                                            una opinión, actitud o comportamiento específico. El objetivo de la
+                                            persuasión es cambiar o reforzar las creencias, valores o comportamientos de
+                                            otra persona. </strong></p>
+                                </li>
+                                <li>
+                                    <p class="lead"><strong><em>Condicionamiento:<br></em>El condicionamiento es un
+                                            proceso mediante el cual se aprende a asociar un estímulo con una respuesta.
+                                            Es decir, el condicionamiento implica que la presentación de un estímulo
+                                            específico provoca una respuesta automática o conducta aprendida. </strong>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="lead"><strong><em>Interconexión: <br></em>La interconexión se refiere a la
+                                            conexión o vinculación de diferentes sistemas, dispositivos, redes o
+                                            componentes entre sí, con el fin de establecer una comunicación o
+                                            intercambio de información. Esta conexión puede ser física, a través de
+                                            cables, o virtual, utilizando protocolos y tecnologías de red. </strong></p>
+                                </li>
+                                <li>
+                                    <p class="lead"><strong><em>Sesgos Cognitivos: <br></em>Los sesgos cognitivos son
+                                            patrones de pensamiento o percepción distorsionados que pueden llevar a
+                                            juicios y decisiones inexactas o irracionales. Estos sesgos son el resultado
+                                            de procesos mentales automáticos y no siempre son conscientes.
+
+                                            Los sesgos cognitivos pueden influir en la forma en que interpretamos la
+                                            información, recordamos los eventos, tomamos decisiones y juzgamos
+                                            situaciones y personas. Pueden ser causados por una variedad de factores,
+                                            como la limitación de la información disponible, la complejidad de la
+                                            información, los prejuicios personales y las experiencias previas. </strong>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="lead"><strong><em>Cualitativa:<br></em>El término "cualitativa" se refiere
+                                            a una forma de análisis que se enfoca en la naturaleza y características de
+                                            un fenómeno en lugar de su cantidad o medida. En el contexto de la
+                                            investigación, la investigación cualitativa se enfoca en comprender la
+                                            experiencia y la perspectiva de las personas involucradas en un fenómeno en
+                                            particular. La investigación cualitativa a menudo implica recopilar datos a
+                                            través de observación participante, entrevistas y análisis de documentos, y
+                                            los resultados se presentan en forma de descripciones detalladas y
+                                            narrativas, en lugar de estadísticas o números. En resumen, la investigación
+                                            cualitativa se centra en la calidad, el significado y la comprensión
+                                            profunda de un fenómeno, en lugar de su medición y cuantificación. </strong>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="lead"><strong>Rigurosa: <em><br></em>El término "rigurosa" se refiere a
+                                            algo que se realiza con extrema precisión, detalle y cuidado, siguiendo un
+                                            conjunto de normas, reglas o estándares estrictos. Una actividad rigurosa
+                                            implica un alto grado de disciplina, método y rigor en su ejecución, y se
+                                            lleva a cabo de manera minuciosa y sistemática para garantizar la precisión
+                                            y la exactitud en los resultados. </strong></p>
+                                </li>
+                                <li>
+                                    <p class="lead"><strong><em>Phishing: <br></em>El phishing es un tipo de ataque
+                                            cibernético en el que un delincuente se hace pasar por una entidad legítima,
+                                            como un banco, una empresa o un sitio web de confianza, con el objetivo de
+                                            obtener información confidencial del usuario, como contraseñas, números de
+                                            tarjeta de crédito u otra información personal.
+
+                                            El ataque generalmente se lleva a cabo mediante el envío de correos
+                                            electrónicos fraudulentos o mediante la creación de sitios web falsos que
+                                            imitan a los sitios web legítimos. Estos mensajes y sitios web engañosos
+                                            suelen incluir enlaces que llevan a la víctima a ingresar sus datos
+                                            personales en formularios falsos o descargas de software malicioso.
+                                        </strong></p>
+                                </li>
+                                <li>
+                                    <p class="lead"><strong><em>Firewalls: <br></em>Los firewalls son programas o
+                                            dispositivos que se utilizan para proteger las redes de computadoras de
+                                            amenazas externas, como ataques cibernéticos, virus y malware. Los firewalls
+                                            pueden bloquear el tráfico no deseado y permitir que solo el tráfico
+                                            autorizado pase a través de ellos.
+
+                                            Los firewalls pueden ser hardware o software, y se pueden configurar para
+                                            permitir o denegar el acceso a ciertos tipos de tráfico de red, como el
+                                            tráfico entrante o saliente, el tráfico de una dirección IP específica o el
+                                            tráfico de un puerto específico. </strong></p>
+                                </li>
+                                <li>
+                                    <p class="lead"><strong><em>Hackers: <br></em>Los hackers son personas con
+                                            habilidades avanzadas en el uso de la tecnología, particularmente en el
+                                            ámbito de la informática y la programación. En general, se considera que un
+                                            hacker es alguien que utiliza su conocimiento y habilidades para explorar y
+                                            modificar sistemas informáticos, redes y software de manera creativa e
+                                            innovadora.
+
+                                            Sin embargo, el término "hacker" a menudo se asocia erróneamente con
+                                            actividades ilegales y delitos informáticos, como el robo de información, la
+                                            difusión de virus informáticos o el acceso no autorizado a sistemas
+                                            privados. Es importante distinguir entre los "hackers" éticos, que utilizan
+                                            sus habilidades para mejorar la seguridad de los sistemas y la protección de
+                                            datos, y los "hackers" malintencionados, que buscan causar daño y obtener
+                                            beneficios a través de actividades ilegales en línea. </strong></p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="my-3" id="tipo-inv">
+                <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+                    <h3>Tipo de investigación</h3>
+                </div>
+
+                <div>
+                    <div class="bd-example-snippet bd-code-snippet">
+                        <div class="bd-example m-0 border-0">
+                            <p class="display-4">Procedimiento</p>
+
+                            <p class="lead"><strong>Para la investigación, se podría utilizar un enfoque mixto que
+                                    combina tanto métodos cualitativos como cuantitativos. Esto permitirá obtener una
+                                    comprensión más completa de los aspectos técnicos y sociales involucrados en el
+                                    estudio. <br><br>
+
+                                    Investigación exploratoria: Este tipo de investigación se utiliza para
+                                    familiarizarse con el tema de la ingeniería social, identificar posibles variables e
+                                    hipótesis, y generar nuevas ideas. Se pueden utilizar métodos cualitativos, como
+                                    entrevistas o grupos focales, para recopilar información y obtener una comprensión
+                                    inicial del fenómeno. <br><br>
+
+                                    Investigación descriptiva: Este enfoque busca describir y caracterizar los procesos,
+                                    técnicas y métodos utilizados en la ingeniería social. Puede incluir la recopilación
+                                    de datos cuantitativos y cualitativos mediante encuestas, entrevistas estructuradas
+                                    y observaciones. El objetivo es identificar patrones y tendencias en el
+                                    comportamiento social y las técnicas utilizadas en la ingeniería social. </strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="my-3" id="identificacion">
+                <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+                    <h3>Identificación de la información a investigar</h3>
+                </div>
+
+                <div>
+                    <div class="bd-example-snippet bd-code-snippet">
+                        <div class="bd-example m-0 border-0">
+
+                            <p class="lead"><strong>
+                                    La información que se maneja en la investigación se busca que sea la más completa,
+                                    verídica, y confiable posible, ya que es la base de la investigación. Está tiene que
+                                    pasar con nuestros requisitos para poder ser seleccionada a consideración para el
+                                    proyecto, ya que nuestra prioridad es dar información cierta y verídica.
+                                </strong></p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="my-3" id="universo">
+                <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+                    <h3>Universo o población: Muestra y margen de error.</h3>
+                </div>
+
+                <div>
+                    <div class="bd-example-snippet bd-code-snippet">
+                        <div class="bd-example m-0 border-0">
+
+                            <p class="lead"><strong>
+                                    El universo es toda la población adulta y juvenil de la ciudad de Saltillo, Coahuila
+                                    que pueda ser víctima de la ingeniería social. <br><br>
+
+                                    La muestra del proyecto está enfocada a los jóvenes y adultos de Saltillo
+                                    específicamente en la carrera de Ingeniería de Sistemas Computacionales del
+                                    Instituto Tecnológico de Saltillo y lectores de internet que puedan estar en
+                                    situación de vulnerabilidad por los riesgos de la ingeniería social. <br><br>
+
+                                    Tamaño de la muestra: 80 <br><br>
+                                    Nivel de confianza: 95% <br><br>
+                                    Probabilidad de éxito/fracaso: 60% <br><br>
+                                    Margen de error: 10.74%
+                                </strong></p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="my-3" id="procedimiento">
+                <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+                    <h3>Procedimiento</h3>
+                </div>
+
+                <div>
+                    <div class="bd-example-snippet bd-code-snippet">
+                        <div class="bd-example m-0 border-0">
+
+                            <p class="lead"><strong>
+                                    El procedimiento de ingeniería social que se llevó a cabo se siguió en base a lo
+                                    siguiente teniendo en cuenta la lógica que se debe tener y la factibilidad para
+                                    realizar cada etapa del proyecto. Se redactó de forma infinitiva.
+                                </strong></p>
+
+                            <ol>
+                                <li>
+                                    <p class="lead"><strong>Identificación del problema: Definir claramente el problema
+                                            o fenómeno social que deseas abordar en el proyecto. Comprender su contexto,
+                                            causas y consecuencias.</strong></p>
+                                </li>
+                                <li>
+                                    <p class="lead"><strong>Revisión bibliográfica: Realizar una revisión exhaustiva de
+                                            la literatura existente sobre el problema social en cuestión. Examina
+                                            investigaciones y enfoques teóricos relacionados con el tema para obtener
+                                            una base sólida de conocimientos. </strong></p>
+                                </li>
+                                <li>
+                                    <p class="lead"><strong>Establecimiento de objetivos: Definir los objetivos
+                                            específicos que se desea lograr con la investigación. Los objetivos deben
+                                            ser alcanzables, medibles y orientados hacia la resolución del problema
+                                            identificado. </strong></p>
+                                </li>
+                                <li>
+                                    <p class="lead"><strong>Diseño de la investigación: Determinar los métodos y
+                                            enfoques de investigación adecuados para abordar tus objetivos. Estos
+                                            métodos pueden incluir encuestas, entrevistas, análisis de documentos,
+                                            observación participante, análisis de redes sociales, entre otros. </strong>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="lead"><strong>Selección de la muestra: Identificar la población o grupo de
+                                            interés para la investigación y selecciona una muestra representativa de ese
+                                            grupo. Utiliza métodos de muestreo apropiados para garantizar que la muestra
+                                            sea representativa de la población objetivo. </strong></p>
+                                </li>
+                                <li>
+                                    <p class="lead"><strong>Recolección de datos: Implementar tu plan de recolección de
+                                            datos, siguiendo los métodos y enfoques definidos previamente.  </strong>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="lead"><strong>Análisis de datos: Analizar los datos recopilados utilizando
+                                            técnicas apropiadas de análisis estadístico, codificación cualitativa o
+                                            cualquier otro método pertinente. Examinar los patrones, tendencias y
+                                            relaciones emergentes en los datos para obtener información significativa
+                                            relacionada con la problemática. </strong></p>
+                                </li>
+                                <li>
+                                    <p class="lead"><strong>Interpretación de resultados: Interpretar los resultados del
+                                            análisis de datos en relación con los objetivos de investigación y la
+                                            problemática en cuestión. Extraer conclusiones basadas en la evidencia y se
+                                            discute las implicaciones de los hallazgos. </strong></p>
+                                </li>
+                                <li>
+                                    <p class="lead"><strong>Desarrollo de estrategias de intervención: Utilizar los
+                                            resultados de tu investigación para desarrollar estrategias y
+                                            recomendaciones específicas para abordar el problema. Estas estrategias
+                                            pueden incluir acciones de sensibilización, políticas de intervención,
+                                            programas comunitarios u otras medidas relevantes. </strong></p>
+                                </li>
+                                <li>
+                                    <p class="lead"><strong>Errores: Los errores que se presentan son los siguientes:
+
+                                            Complejidad en los problemas sociales
+
+                                            Desconfianza de la web </strong></p>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="my-3" id="resultados">
+                <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+                    <h3>Análisis de resultados</h3>
+                </div>
+
+                <div>
+                    <div class="bd-example-snippet bd-code-snippet">
+                        <div class="bd-example m-0 border-0">
+                            <p class="display-4">Resultados de encuestas</p>
+
+                            <h4>Primera encuesta</h4>
+                            <p class="lead"><strong>En esta primer encuesta se realizo a 10 estudiantes de la carrera de
+                                    ingenieria de sistemas computacionales. </strong></p>
+
+                            <img src="recursos/images/Encuesta_1.png" alt="Encuesta 1" class="mt-5 mb-5 img-fluid">
+                            <img src="recursos/images/Encuesta_2.png" alt="Encuesta 2" class="mt-5 mb-5 img-fluid">
+                            <img src="recursos/images/Encuesta_3.png" alt="Encuesta 3" class="mt-5 mb-5 img-fluid">
+                            <img src="recursos/images/Encuesta_4.png" alt="Encuesta 4" class="mt-5 mb-5 img-fluid">
+                            <img src="recursos/images/Encuesta_5.png" alt="Encuesta 5" class="mt-5 mb-5 img-fluid">
+
+                            <h4>Segunda encuesta</h4>
+
+                            <img src="recursos/images/Encuesta_6.png" alt="Encuesta 1" class="mt-5 mb-5 img-fluid">
+                            <img src="recursos/images/Encuesta_7.png" alt="Encuesta 2" class="mt-5 mb-5 img-fluid">
+                            <img src="recursos/images/Encuesta_8.png" alt="Encuesta 3" class="mt-5 mb-5 img-fluid">
+                            <img src="recursos/images/Encuesta_9.png" alt="Encuesta 4" class="mt-5 mb-5 img-fluid">
+                            <img src="recursos/images/Encuesta_10.png" alt="Encuesta 5" class="mt-5 mb-5 img-fluid">
+                            <img src="recursos/images/Encuesta_11.png" alt="Encuesta 1" class="mt-5 mb-5 img-fluid">
+                            <img src="recursos/images/Encuesta_12.png" alt="Encuesta 2" class="mt-5 mb-5 img-fluid">
+                            <img src="recursos/images/Encuesta_13.png" alt="Encuesta 3" class="mt-5 mb-5 img-fluid">
+                            <img src="recursos/images/Encuesta_14.png" alt="Encuesta 4" class="mt-5 mb-5 img-fluid">
+
+                            <h4>Hipótesis general</h4>
+                            <p class="lead"><strong>El 80% de los estudiantes del ITS no saben que es la ingeniería
+                                    social. <br><br>
+
+                                    Los resultados de la encuesta indicaron que la mayoría de los estudiantes de la
+                                    carrera de sistemas computacionales, no tienen conocimiento alguno respecto a la
+                                    ingeniería social. </strong></p>
+
+                            <h4>Hipótesis específicas</h4>
+                            <ul>
+                                <li>
+                                    <p class="lead"><strong>Enfoque académico específico: Se enfoca en áreas académicas
+                                            específicas que no abordan directamente la ingeniería social, los
+                                            estudiantes podrían no estar expuestos a este concepto durante su formación.
+                                        </strong></p>
+                                </li>
+                                <li>
+                                    <p class="lead"><strong>Los resultados de la encuesta nos indicaron que los
+                                            estudiantes no se encuentran familiarizados con la ingenieria social, esto
+                                            es causado porque no imparten cursos o talleres sobre este tema dentro de la
+                                            institución.
+
+                                            Desconexión con la ciberseguridad. <br><br> Los resultados arrojaron que el
+                                            alumnado al no tener la oportunidad de participar o realizar un proyecto de
+                                            ciberseguridad relacionado con la ingenieria social, no están al tanto de la
+                                            existencia de este tema. </strong></p>
+                                </li>
+                                <li>
+                                    <p class="lead"><strong>Enfoque en otras áreas de conocimiento: Los estudiantes
+                                            están ocupados con otras áreas de estudio o proyectos académicos, podrían no
+                                            dedicar tiempo a investigar sobre la ingeniería social por iniciativa
+                                            propia. <br><br> Los resultados de la encuesta nos mostraron que los alumnos
+                                            de sistemas computacionales al estar más pendientes en las otras materias no
+                                            le dedican el tiempo suficiente a investigar sobre la ingenieria
+                                            social.</strong></p>
+                                </li>
+                                <li>
+                                    <p class="lead"><strong>Desinterés general: Los estudiantes podrían no considerar la
+                                            ingeniería social como un tema de interés personal o relevante para su
+                                            carrera, lo que podría llevar a la falta de conocimiento. </strong></p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="my-3" id="conclusiones">
+                <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+                    <h3>Conclusiones personales</h3>
+                </div>
+
+                <div>
+                    <div class="bd-example-snippet bd-code-snippet">
+                        <div class="bd-example m-0 border-0">
+                            <p class="display-4">Conclusiones</p>
+
+                            <h4>Francisco Javier Valerio Vásquez. </h4>
+                            <p class="lead"><strong>
+                                    He llegado a la conclusión de que la ingeniería social es un tema de gran relevancia
+                                    en nuestra sociedad actual. A través de mi estudio, he destacado la importancia de
+                                    la conciencia y el conocimiento de la ingeniería social, no sólo para los
+                                    profesionales de la ciberseguridad, sino también para el público en general. Los
+                                    resultados de mis encuestas han proporcionado una visión valiosa de la conciencia y
+                                    el conocimiento de la ingeniería social entre los estudiantes. Estos hallazgos han
+                                    resaltado la necesidad de incorporar la ingeniería social y la ciberseguridad en el
+                                    currículo académico, promover la conciencia de la ciberseguridad, fomentar la
+                                    investigación en ingeniería social, desarrollar habilidades de autodidactismo y
+                                    promover la ética en la ciberseguridad. Mis recomendaciones, basadas en los
+                                    resultados de mi investigación, son prácticas y bien fundamentadas. Si se
+                                    implementan, podrían tener un impacto significativo en la conciencia y el
+                                    conocimiento de la ingeniería social entre los estudiantes. <br><br>
+
+                                    En resumen, mi proyecto de investigación es un estudio riguroso y bien ejecutado que
+                                    contribuye de manera significativa a nuestro entendimiento de la ingeniería social.
+                                    Mi trabajo no sólo destaca la importancia de la conciencia y el conocimiento de la
+                                    ingeniería social, sino que también proporciona recomendaciones prácticas para
+                                    mejorar la educación y la formación en este campo. Estoy orgulloso de los resultados
+                                    de mi investigación y espero que pueda tener un impacto positivo en la sociedad.
+                                </strong></p>
+
+                            <h4>Francisco Javier Banda Bartolo. </h4>
+                            <p class="lead"><strong>
+                                    En conclusión, la ingeniería social emerge como una amenaza significativa en el
+                                    panorama de la seguridad de la información. A lo largo de esta investigación, hemos
+                                    explorado diversos aspectos de esta táctica, que combina habilidades psicológicas
+                                    con manipulación para obtener acceso no autorizado a información confidencial. Hemos
+                                    observado cómo los atacantes aprovechan la confianza y la persuasión para eludir las
+                                    medidas técnicas de seguridad, subrayando la importancia de la conciencia y la
+                                    educación en la prevención de ataques de ingeniería social. <br><br>
+
+                                    Además, hemos examinado ejemplos concretos de técnicas utilizadas por los ingenieros
+                                    sociales, desde la suplantación de identidad hasta la explotación de la curiosidad
+                                    humana. Estas tácticas requieren respuestas integrales que abarquen tanto la
+                                    tecnología como la formación de los usuarios. Es crucial implementar políticas de
+                                    seguridad sólidas, mejorar la capacitación en conciencia de seguridad y fomentar una
+                                    cultura organizacional que promueva la vigilancia y la denuncia de intentos de
+                                    ingeniería social. Por otra parte, al momento de realizar las encuestas nos dimos
+                                    cuenta de que una gran parte de los estudiantes de Sistemas Computacionales no
+                                    tenían conocimiento sobre la existencia de la ingeniería social, esto se debe a que
+                                    este tema no se incluye en el plan de estudios de la carrera en el instituto
+                                    tecnológico de saltillo y a la falta de interés sobre el tema en los estudiantes.
+                                    Por último, como recomendación basándonos en los resultados de nuestro proyecto de
+                                    investigación es dar a conocer el uso de la ingeniería social a nuestros compañeros
+                                    de sistemas y proponer que incluyan el tema de la ingeniería social dentro del plan
+                                    de estudios de una materia relacionada para mantener mejor informados a los
+                                    estudiantes.
+                                </strong></p>
+
+                            <h4>Emanuel Agustin Ortiz Cruz </h4>
+                            <p class="lead"><strong>
+                                    Después de toda la investigación que llevamos a cabo dentro de este proyecto de
+                                    investigación llegue a la conclusión que la ingeniería social es una forma de ataque
+                                    que se centra en la manipulación psicológica para obtener información privada o
+                                    confidencial, y realizar acciones perjudiciales para las personas. <br><br>
+
+                                    Este engloba diversas estrategias, como el engaño, la persuasión y la manipulación
+                                    emocional, con el propósito de inducir a individuos o empleados a realizar acciones
+                                    que comprometan la seguridad de la información. Puede hacerse en diversas formas,
+                                    como llamadas telefónicas fraudulentas, correos electrónicos, mensajes engañosos o
+                                    incluso interacciones en persona. <br><br>
+
+                                    Para prevenir la ingeniería social, básicamente necesitas ser un poco escéptico y
+                                    estar alerta. algunas cosas simples que puedes hacer son: <br><br>
+
+                                    Asegúrate de conocer las tácticas comunes de engaño y asegúrate de que tus amigos o
+                                    colegas también estén al tanto. <br><br>
+
+                                    Antes de dar información sensible o hacer algo inusual, confirma que la solicitud
+                                    sea legítima al verifica la identidad de la persona o entidad. <br><br>
+
+                                    Si recibes solicitudes sorpresivas de información, especialmente por correo
+                                    electrónico o teléfono, sé precavido y verifica antes de actuar. <br><br>
+
+                                    Asegúrate de que tus programas y sistemas estén siempre actualizados, esto porque
+                                    las actualizaciones a menudo corrigen problemas de seguridad. <br><br>
+
+                                    Si algo parece extraño en tus interacciones en línea o en el trabajo debes prestar
+                                    atención, detectarlo tempranamente puede evitar problemas mayores. <br><br>
+
+                                    Hay que ser cuidadoso con la información que compartes en línea, las personas pueden
+                                    usar tu información personal para intentar engañarte. <br><br>
+
+                                    En resumen, la clave es ser consciente, dudar un poco antes de compartir información
+                                    y seguir las reglas de seguridad establecidas.
+                                </strong></p>
+
+                            <h4>Samuel Israel Rodríguez Flores </h4>
+                            <p class="lead"><strong>
+                                    La ingeniería social es una técnica que utilizan los ciberdelincuentes para
+                                    manipular a las personas y obtener información confidencial o acceso a sistemas de
+                                    información. En lugar de atacar directamente los sistemas de seguridad, los
+                                    ciberdelincuentes explotan las debilidades humanas para engañar a las personas y
+                                    obtener información que les permita realizar acciones ilegales. Por ejemplo, un
+                                    correo electrónico que parece provenir de una empresa legítima y solicita
+                                    información personal o financiera, o una llamada telefónica que parece ser del
+                                    soporte técnico y solicita acceso remoto a tu computadora. <br><br>
+
+                                    Estos son solo algunos ejemplos de ingeniería social. Es importante tener en cuenta
+                                    que la ingeniería social no solo se utiliza en línea, sino también en el mundo real.
+                                    Por ejemplo, un ladrón que se hace pasar por un empleado de mantenimiento para
+                                    ingresar a un edificio y robar información confidencial.
+                                </strong></p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="recursos/js/cheatsheet.js"></script>
+</body>
+
+</html>
